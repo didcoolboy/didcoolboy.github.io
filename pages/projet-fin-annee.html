@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet de fin d'année - Portfolio BTS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header class="topbar" id="top">
+    <div class="container topbar-content">
+      <a href="index.html#accueil" class="brand">Portfolio BTS</a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="travaux-ecole.html">Travaux école</a></li>
+          <li><a href="travaux-stage.html">Travaux en stage</a></li>
+          <li><a href="projet-fin-annee.html">Projet de fin d'année</a></li>
+          <li><a href="competences.html">Competences</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section full-height-section" id="projet-fin-annee">
+      <div class="container">
+        <h2>Projet de fin d'année</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Application complete</h3>
+            <p>Developpement full-stack avec authentification et dashboard.</p>
+          </article>
+          <article class="card">
+            <h3>API metier</h3>
+            <p>Conception d'une API REST et integration avec client web.</p>
+          </article>
+          <article class="card">
+            <h3>Projet equipe</h3>
+            <p>Pilotage agile, tests et livraison d'une solution fonctionnelle.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button id="scrollTopBtn" class="scroll-top" aria-label="Remonter en haut">↑</button>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p><strong>Contact</strong></p>
+      <button class="btn btn-outline footer-contact-btn" type="button" data-open-contact>Voir mes infos</button>
+    </div>
+  </footer>
+
+  <div class="modal" id="contactModal" aria-hidden="true" role="dialog" aria-labelledby="contactTitle">
+    <div class="modal-backdrop" data-close-contact></div>
+    <div class="modal-panel">
+      <h2 id="contactTitle">Mes infos</h2>
+      <p><strong>Braque Mathieu</strong></p>
+      <p>Telephone: 07 89 70 57 58</p>
+      <p>Email: mathieubraque@gmail.com</p>
+      <button class="btn btn-primary" type="button" data-close-contact>Fermer</button>
+    </div>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

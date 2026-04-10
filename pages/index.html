@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio BTS - Nom Prenom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header class="topbar" id="top">
+    <div class="container topbar-content">
+      <a href="#accueil" class="brand">Portfolio BTS</a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="travaux-ecole.html">Travaux école</a></li>
+          <li><a href="travaux-stage.html">Travaux en stage</a></li>
+          <li><a href="projet-fin-annee.html">Projet de fin d'année</a></li>
+          <li><a href="competences.html">Competences</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="container hero-vertical">
+        <div class="hero-intro">
+          <p class="kicker">BTS - Portfolio personnel</p>
+          <h1>Bonjour, je suis <span>Braque Mathieu</span></h1>
+          <p class="lead">
+            Etudiant en BTS, je presente ici mes projets realises en premiere et deuxieme annee,
+            mes competences techniques et mes experiences en stage.
+          </p>
+        </div>
+        <a class="btn btn-primary scroll-down-cta" href="#accueil-bas">Scroller vers le bas</a>
+      </div>
+    </section>
+
+    <section class="section" id="accueil-bas">
+      <div class="container accueil-bottom-grid">
+        <div class="photo-placeholder" aria-label="Emplacement pour une photo">
+          <div class="photo-frame">
+            <span>Photo</span>
+            <p>Ajoute ici une photo professionnelle</p>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Infos rapides">
+          <h2>Infos rapides</h2>
+          <ul>
+            <li><strong>Formation:</strong> BTS</li>
+            <li><strong>Specialite:</strong> A completer</li>
+            <li><strong>Objectif:</strong> Alternance / emploi</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+
+
+    <section class="section alt" id="cv">
+      <div class="container cv-box">
+        <div>
+          <h2>Mon CV</h2>
+          <p>Tu peux telecharger ou consulter mon CV au format PDF.</p>
+        </div>
+        <div class="cv-actions">
+          <a class="btn btn-primary" href="cv.pdf" target="_blank" rel="noopener">Ouvrir mon CV</a>
+          <a class="btn btn-outline" href="travaux-ecole.html">Retour au projet</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button id="scrollTopBtn" class="scroll-top" aria-label="Remonter en haut">↑</button>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p><strong>Contact</strong></p>
+      <button class="btn btn-outline footer-contact-btn" type="button" data-open-contact>Voir mes infos</button>
+    </div>
+  </footer>
+
+  <div class="modal" id="contactModal" aria-hidden="true" role="dialog" aria-labelledby="contactTitle">
+    <div class="modal-backdrop" data-close-contact></div>
+    <div class="modal-panel">
+      <h2 id="contactTitle">Mes infos</h2>
+      <p><strong>Braque Mathieu</strong></p>
+      <p>Telephone: 07 89 70 57 58</p>
+      <p>Email: mathieubraque@gmail.com</p>
+      <button class="btn btn-primary" type="button" data-close-contact>Fermer</button>
+    </div>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
