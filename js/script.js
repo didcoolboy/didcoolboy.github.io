@@ -144,7 +144,7 @@ const renderWorkDetail = () => {
       requestPdfElement.innerHTML = "";
     } else {
       const source = encodeURI(pdfSources[0]);
-      requestPdfElement.innerHTML = `<object data="${source}" type="application/pdf" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;"><p>Votre navigateur ne peut pas afficher le PDF. <a href="${source}" target="_blank" rel="noopener">Ouvrir le PDF</a></p></object>`;
+      requestPdfElement.innerHTML = `<iframe src="${source}" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;" title="PDF viewer"></iframe><p style="margin-top:10px;"><a href="${source}" target="_blank" rel="noopener">↓ Ouvrir le PDF en plein écran</a></p>`;
     }
   }
 
@@ -156,7 +156,7 @@ const renderWorkDetail = () => {
       responsePdfElement.innerHTML = "";
     } else {
       const source = encodeURI(pdfSources[0]);
-      responsePdfElement.innerHTML = `<object data="${source}" type="application/pdf" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;"><p>Votre navigateur ne peut pas afficher le PDF. <a href="${source}" target="_blank" rel="noopener">Ouvrir le PDF</a></p></object>`;
+      responsePdfElement.innerHTML = `<iframe src="${source}" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;" title="PDF viewer"></iframe><p style="margin-top:10px;"><a href="${source}" target="_blank" rel="noopener">↓ Ouvrir le PDF en plein écran</a></p>`;
     }
   }
 
