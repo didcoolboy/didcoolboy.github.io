@@ -13,10 +13,8 @@ const schoolWorks = {
     request: "Expression de la demande : prise en compte du nommage pour les fichiers et les dossiers (définir les conventions attendues, structure et format des noms).",
     response: "Travail réalisé : contrôle des fichiers et dossiers, identification des écarts par rapport à la charte, renommage et normalisation des éléments non conformes, et rédaction d'un court rapport de conformité.",
     requestPdfCandidates: [
-      "../assets/charte-nommage-demande.pdf",
-      "../assets/charte-nommage.pdf",
-      "../assets/charte_nommage.pdf",
-      "../assets/demande-charte-nommage.pdf",
+      "../assets/charte-nommage-demande.pdf.pdf",
+      "../assets/_Non-respect de la charte de nommage.pdf",
     ],
     tools: ["Google Docs", "Methode de nommage"],
   },
