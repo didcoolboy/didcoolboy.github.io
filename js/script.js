@@ -14,8 +14,8 @@ const schoolWorks = {
     response: "Travail réalisé : contrôle des fichiers et dossiers, identification des écarts par rapport à la charte, renommage et normalisation des éléments non conformes, et rédaction d'un court rapport de conformité.",
     requestPdfCandidates: [
       "../assets/charte-nommage-demande.pdf.pdf",
-      "../assets/_Non-respect de la charte de nommage.pdf",
     ],
+    responsePdfCandidates: ["../assets/_Non-respect de la charte de nommage.pdf"],
     tools: ["Google Docs", "Methode de nommage"],
   },
   "charte-informatique": {
@@ -145,6 +145,18 @@ const renderWorkDetail = () => {
     } else {
       const source = pdfSources[0];
       requestPdfElement.innerHTML = `<object data="${source}" type="application/pdf" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;"><p>Votre navigateur ne peut pas afficher le PDF. <a href="${source}" target="_blank" rel="noopener">Ouvrir le PDF</a></p></object>`;
+    }
+  }
+
+  const responsePdfElement = document.querySelector("[data-work-response-pdf]");
+  if (responsePdfElement) {
+    const pdfSources = work.responsePdfCandidates || (work.responsePdf ? [work.responsePdf] : []);
+
+    if (pdfSources.length === 0) {
+      responsePdfElement.innerHTML = "";
+    } else {
+      const source = pdfSources[0];
+      responsePdfElement.innerHTML = `<object data="${source}" type="application/pdf" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;"><p>Votre navigateur ne peut pas afficher le PDF. <a href="${source}" target="_blank" rel="noopener">Ouvrir le PDF</a></p></object>`;
     }
   }
 
