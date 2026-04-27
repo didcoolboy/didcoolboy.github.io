@@ -143,25 +143,8 @@ const renderWorkDetail = () => {
     if (pdfSources.length === 0) {
       requestPdfElement.innerHTML = "";
     } else {
-      requestPdfElement.innerHTML = "<p>Chargement du PDF...</p>";
-
-      const resolvePdfSource = async () => {
-        for (const source of pdfSources) {
-          try {
-            const response = await fetch(source, { method: "HEAD" });
-            if (response.ok) {
-              requestPdfElement.innerHTML = `<object data="${source}" type="application/pdf" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;"><p>Votre navigateur ne peut pas afficher le PDF. <a href="${source}" target="_blank" rel="noopener">Ouvrir le PDF</a></p></object>`;
-              return;
-            }
-          } catch (error) {
-            // Try the next possible file name.
-          }
-        }
-
-        requestPdfElement.innerHTML = "<p>PDF introuvable. Vérifiez le nom du fichier dans <code>assets</code>.</p>";
-      };
-
-      resolvePdfSource();
+      const source = pdfSources[0];
+      requestPdfElement.innerHTML = `<object data="${source}" type="application/pdf" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;"><p>Votre navigateur ne peut pas afficher le PDF. <a href="${source}" target="_blank" rel="noopener">Ouvrir le PDF</a></p></object>`;
     }
   }
 
