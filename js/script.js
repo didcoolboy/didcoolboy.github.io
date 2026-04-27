@@ -12,6 +12,12 @@ const schoolWorks = {
     imageAlt: "Apercu du projet charte de nommage",
     request: "Expression de la demande : prise en compte du nommage pour les fichiers et les dossiers (définir les conventions attendues, structure et format des noms).",
     response: "Travail réalisé : contrôle des fichiers et dossiers, identification des écarts par rapport à la charte, renommage et normalisation des éléments non conformes, et rédaction d'un court rapport de conformité.",
+    requestPdfCandidates: [
+      "../assets/charte-nommage-demande.pdf",
+      "../assets/charte-nommage.pdf",
+      "../assets/charte_nommage.pdf",
+      "../assets/demande-charte-nommage.pdf",
+    ],
     tools: ["Google Docs", "Methode de nommage"],
   },
   "charte-informatique": {
@@ -130,6 +136,35 @@ const renderWorkDetail = () => {
 
   if (requestElement) {
     requestElement.textContent = work.request;
+  }
+
+  const requestPdfElement = document.querySelector("[data-work-request-pdf]");
+  if (requestPdfElement) {
+    const pdfSources = work.requestPdfCandidates || (work.requestPdf ? [work.requestPdf] : []);
+
+    if (pdfSources.length === 0) {
+      requestPdfElement.innerHTML = "";
+    } else {
+      requestPdfElement.innerHTML = "<p>Chargement du PDF...</p>";
+
+      const resolvePdfSource = async () => {
+        for (const source of pdfSources) {
+          try {
+            const response = await fetch(source, { method: "HEAD" });
+            if (response.ok) {
+              requestPdfElement.innerHTML = `<object data="${source}" type="application/pdf" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;"><p>Votre navigateur ne peut pas afficher le PDF. <a href="${source}" target="_blank" rel="noopener">Ouvrir le PDF</a></p></object>`;
+              return;
+            }
+          } catch (error) {
+            // Try the next possible file name.
+          }
+        }
+
+        requestPdfElement.innerHTML = "<p>PDF introuvable. Vérifiez le nom du fichier dans <code>assets</code>.</p>";
+      };
+
+      resolvePdfSource();
+    }
   }
 
   if (responseElement) {
