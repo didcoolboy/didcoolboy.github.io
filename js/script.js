@@ -143,7 +143,7 @@ const renderWorkDetail = () => {
     if (pdfSources.length === 0) {
       requestPdfElement.innerHTML = "";
     } else {
-      const source = pdfSources[0];
+      const source = encodeURI(pdfSources[0]);
       requestPdfElement.innerHTML = `<object data="${source}" type="application/pdf" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;"><p>Votre navigateur ne peut pas afficher le PDF. <a href="${source}" target="_blank" rel="noopener">Ouvrir le PDF</a></p></object>`;
     }
   }
@@ -155,7 +155,7 @@ const renderWorkDetail = () => {
     if (pdfSources.length === 0) {
       responsePdfElement.innerHTML = "";
     } else {
-      const source = pdfSources[0];
+      const source = encodeURI(pdfSources[0]);
       responsePdfElement.innerHTML = `<object data="${source}" type="application/pdf" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;"><p>Votre navigateur ne peut pas afficher le PDF. <a href="${source}" target="_blank" rel="noopener">Ouvrir le PDF</a></p></object>`;
     }
   }
