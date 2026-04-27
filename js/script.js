@@ -10,8 +10,8 @@ const schoolWorks = {
     shortDescription: "Verification des regles de nommage utilisees par un utilisateur.",
     image: "../assets/projet-ecole-placeholder.svg",
     imageAlt: "Apercu du projet charte de nommage",
-    request: "Verifier que les fichiers et dossiers respectent les conventions de nommage demandees dans le TP.",
-    response: "J'ai controle les noms existants, identifie les ecarts et applique les regles attendues pour normaliser l'organisation.",
+    request: "Expression de la demande : prise en compte du nommage pour les fichiers et les dossiers (définir les conventions attendues, structure et format des noms).",
+    response: "Travail réalisé : contrôle des fichiers et dossiers, identification des écarts par rapport à la charte, renommage et normalisation des éléments non conformes, et rédaction d'un court rapport de conformité.",
     tools: ["Google Docs", "Methode de nommage"],
   },
   "charte-informatique": {
