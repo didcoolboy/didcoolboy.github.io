@@ -12,8 +12,8 @@ const schoolWorks = {
     imageAlt: "Apercu du projet charte de nommage",
     request: "Expression de la demande : prise en compte du nommage pour les fichiers et les dossiers (définir les conventions attendues, structure et format des noms).",
     response: "Travail réalisé : contrôle des fichiers et dossiers, identification des écarts par rapport à la charte, renommage et normalisation des éléments non conformes, et rédaction d'un court rapport de conformité.",
-    requestPdfCandidates: ["../assets/charte-nommage-demande.pdf"],
-    responsePdfCandidates: ["../assets/non-respect-charte-nommage.pdf"],
+    requestPdfCandidates: ["../assets/charte-nommage-demande.pdf.pdf"],
+    responsePdfCandidates: ["../assets/_Non-respect de la charte de nommage.pdf"],
     tools: ["Google Docs", "Methode de nommage"],
   },
   "charte-informatique": {
@@ -141,8 +141,8 @@ const renderWorkDetail = () => {
     if (pdfSources.length === 0) {
       requestPdfElement.innerHTML = "";
     } else {
-      const source = encodeURI(pdfSources[0]);
-      requestPdfElement.innerHTML = `<iframe src="${source}" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;" title="PDF viewer" onerror="this.parentElement.innerHTML='<p style=\"color:#d32f2f;\">Impossible de charger le PDF. Vérifiez le fichier <code>${source}</code></p>'"></iframe><p style="margin-top:10px;"><a href="${source}" target="_blank" rel="noopener">↓ Ouvrir le PDF en plein écran</a></p>`;
+      const source = pdfSources[0].replace(/ /g, '%20');
+      requestPdfElement.innerHTML = `<iframe src="${source}" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;" title="PDF viewer" onerror="this.parentElement.innerHTML='<p style=\"color:#d32f2f;\">PDF non disponible</p>'"></iframe><p style="margin-top:10px;"><a href="${source}" target="_blank" rel="noopener">↓ Ouvrir le PDF en plein écran</a></p>`;
     }
   }
 
@@ -153,8 +153,8 @@ const renderWorkDetail = () => {
     if (pdfSources.length === 0) {
       responsePdfElement.innerHTML = "";
     } else {
-      const source = encodeURI(pdfSources[0]);
-      responsePdfElement.innerHTML = `<iframe src="${source}" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;" title="PDF viewer" onerror="this.parentElement.innerHTML='<p style=\"color:#d32f2f;\">Impossible de charger le PDF. Vérifiez le fichier <code>${source}</code></p>'"></iframe><p style="margin-top:10px;"><a href="${source}" target="_blank" rel="noopener">↓ Ouvrir le PDF en plein écran</a></p>`;
+      const source = pdfSources[0].replace(/ /g, '%20');
+      responsePdfElement.innerHTML = `<iframe src="${source}" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;" title="PDF viewer" onerror="this.parentElement.innerHTML='<p style=\"color:#d32f2f;\">PDF non disponible</p>'"></iframe><p style="margin-top:10px;"><a href="${source}" target="_blank" rel="noopener">↓ Ouvrir le PDF en plein écran</a></p>`;
     }
   }
 
