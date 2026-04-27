@@ -144,7 +144,7 @@ const renderWorkDetail = () => {
       requestPdfElement.innerHTML = "";
     } else {
       const source = encodeURI(pdfSources[0]);
-      requestPdfElement.innerHTML = `<iframe src="${source}" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;" title="PDF viewer"></iframe><p style="margin-top:10px;"><a href="${source}" target="_blank" rel="noopener">↓ Ouvrir le PDF en plein écran</a></p>`;
+      requestPdfElement.innerHTML = `<iframe src="${source}" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;" title="PDF viewer" onerror="this.parentElement.innerHTML='<p style=\"color:#d32f2f;\">Impossible de charger le PDF. Vérifiez le fichier <code>${source}</code></p>'"></iframe><p style="margin-top:10px;"><a href="${source}" target="_blank" rel="noopener">↓ Ouvrir le PDF en plein écran</a></p>`;
     }
   }
 
@@ -156,7 +156,7 @@ const renderWorkDetail = () => {
       responsePdfElement.innerHTML = "";
     } else {
       const source = encodeURI(pdfSources[0]);
-      responsePdfElement.innerHTML = `<iframe src="${source}" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;" title="PDF viewer"></iframe><p style="margin-top:10px;"><a href="${source}" target="_blank" rel="noopener">↓ Ouvrir le PDF en plein écran</a></p>`;
+      responsePdfElement.innerHTML = `<iframe src="${source}" width="100%" height="480" style="border:1px solid #e0e0e0; border-radius:8px;" title="PDF viewer" onerror="this.parentElement.innerHTML='<p style=\"color:#d32f2f;\">Impossible de charger le PDF. Vérifiez le fichier <code>${source}</code></p>'"></iframe><p style="margin-top:10px;"><a href="${source}" target="_blank" rel="noopener">↓ Ouvrir le PDF en plein écran</a></p>`;
     }
   }
 
