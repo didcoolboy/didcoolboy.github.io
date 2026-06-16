@@ -178,6 +178,9 @@ h1 span {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: min(320px, 100%);
+  height: auto;
+  margin: 0 auto;
 }
 
 .photo-frame {
