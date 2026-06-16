@@ -208,6 +208,15 @@ h1 span {
   max-width: 18ch;
 }
 
+.profile-photo {
+  width: min(320px, 100%);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
