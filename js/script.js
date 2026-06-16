@@ -21,8 +21,8 @@ const schoolWorks = {
     shortDescription: "Vérification des règles de la charte informatique utilisées par des employés.",
     image: "../assets/projet-ecole-placeholder.svg",
     imageAlt: "Apercu du projet charte informatique",
-    request: "Analyser la charte informatique et verifier son application dans des cas concrets d'usage.",
-    response: "J'ai relu les regles principales et verifie la conformite des pratiques observees en m'appuyant sur la charte.",
+    request: "Analyser la charte informatique et vérifier son application dans des cas concrets d'usage.",
+    response: "J'ai relu les règles principales et vérifié la conformité des pratiques observées en m'appuyant sur la charte.",
     tools: ["Google Docs", "Charte informatique"],
   },
   "programme-csharp": {
@@ -49,7 +49,7 @@ const schoolWorks = {
     image: "../assets/projet-ecole-placeholder.svg",
     imageAlt: "Apercu de la correction du site Linkretz",
     request: "Corriger les anomalies d'un site statique existant dans le cadre d'un TP.",
-    response: "J'ai identifie les erreurs HTML/CSS puis applique les corrections necessaires pour stabiliser le site.",
+    response: "J'ai identifié les erreurs HTML/CSS puis appliqué les corrections nécessaires pour stabiliser le site.",
     tools: ["Visual Studio", "HTML", "CSS"],
   },
   "ubuntu-linux": {
@@ -63,7 +63,7 @@ const schoolWorks = {
   },
   "patrimoine-informatique": {
     title: "Le patrimoine informatique",
-    shortDescription: "Mise en place d'une installation complete autour de GLPI.",
+    shortDescription: "Mise en place d'une installation complète autour de GLPI.",
     image: "../assets/projet-ecole-placeholder.svg",
     imageAlt: "Apercu du projet patrimoine informatique",
     request: "Mettre en place l'inventaire et la gestion du patrimoine informatique avec GLPI.",
@@ -95,7 +95,7 @@ const schoolWorks = {
     imageAlt: "Apercu du projet veille informatique",
     request: "Mettre en place une veille reguliere sur des sujets informatiques pour identifier les tendances utiles.",
     response: "J'ai réalisé une veille structurée avec collecte de sources, tri des informations et rédaction d'une synthèse exploitable.",
-    tools: ["Veille", "Analyse", "Synthese"],
+    tools: ["Veille", "Analyse", "Synthèse"],
   },
 };
 
